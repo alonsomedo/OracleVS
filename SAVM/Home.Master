@@ -1,0 +1,252 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="SAVM.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MUNDOFARMA</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+
+    <link rel="stylesheet" href="plugins/sweet-alert.css">
+    <link rel="stylesheet" href="plugins/jquery.toast.min.css">
+
+    <!----Evitar Cache CSS Y JAVASCRIPT ---->
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+
+    <link href="img/m.jpg" rel="icon" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-blue sidebar-mini" onload="if ('Navigator' == navigator.appName)
+document.forms[0].reset();">
+
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini">
+                    <img src="img/m.png" alt="Alternate Text" height="45px" width="35px" /></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg">
+                    <img src="img/m.png" alt="Alternate Text" height="45px" width="35px" /><b>MUNDO</b>Farma</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="img/medico.png" class="user-image" alt="User Image">
+                                <span class="hidden-xs">AEAJBS</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="img/medico.png" class="img-circle" alt="User Image">
+
+                                    <p>
+                                        AEAJBS
+                 
+                                        <small>Usuario 20142</small>
+                                    </p>
+                                </li>
+                                
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-10 text-center">
+                                            <a href="#">Ventas Realizadas :</a>
+                                            <p>0</p>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                                <li>
+                                    <input id="btnCerrarSesion" style="text-align:center" class=" col-xs-12 col-sm-12 btn btn-primary" type="button" name="name" value="Cerrar Sesión" />
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="img/medico.png" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>AEAJBS</p>
+                    </div>
+                </div>
+                <br>
+                <!------------------------------------------- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="header">MENU</li>
+                    <!-- -->
+                    <li class="treeview">
+                        <a href="GenerarVenta.aspx">
+                            <i class="fa fa-heartbeat"></i><span>Ventas</span>
+                        </a>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="Medicamentos.aspx">
+                            <i class="fa fa-medkit"></i>
+                            <span>Medicamentos</span>
+                        </a>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Ordenes de Compra</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="GenerarOrdenCompra.aspx"><i class="fa fa-circle-o"></i>Generar O/C</a></li>
+                            <li><a href="ConsultarOrdenCompra.aspx"><i class="fa fa-circle-o"></i>Consultar O/C</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-table"></i><span>Incidentes</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="RegistrarIncidente.aspx"><i class="fa fa-circle-o"></i>Registrar Incidente</a></li>
+                            <li><a href="ConsultarIncidente.aspx"><i class="fa fa-circle-o"></i>Consultar Incidente</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-flask"></i><span>Proveedores</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="RegistrarFactura.aspx"><i class="fa fa-circle-o"></i>Registrar Factura</a></li>
+                            <li><a href="Proveedores.aspx"><i class="fa fa-circle-o"></i>Mantener Proveedor</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-edit"></i><span>Reportes</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i>Ventas</a></li>
+                            <li><a href="ReporteMedicamentoStock.aspx"><i class="fa fa-circle-o"></i>Medicamentos - Stock</a></li>
+                            <li><a href="ReporteMedicamentoVencimiento.aspx"><i class="fa fa-circle-o"></i>Medicamentos - F.Vencimiento</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user-md"></i><span>Usuarios</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    <small></small>
+                </h1>
+                <div class="container body-content">
+
+                    <form id="form1" runat="server">
+
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            <!--- CONTENIDO ---->
+                        </asp:ContentPlaceHolder>
+
+                    </form>
+
+                </div>
+            </section>
+
+            <!-- Main content -->
+            <!-- /.content -->
+        </div>
+
+
+        <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    
+    <!-- jQuery 2.2.3 -->
+    <script src="plugins/jquery/jquery-3.2.1.min.js"></script>
+
+    <script src="plugins/sweet-alert.min.js"></script>
+
+    <script type="text/javascript" src="plugins/jquery.toast.min.js"></script>
+
+    <!-- Bootstrap 3.3.6 -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="plugins/AdminLTE/app.min.js"></script>
+    <!-- DataTables -->
+
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <!-- librerias necesarias para botones de exportar --->
+    <script src="plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="plugins/datatables/buttons.flash.min.js"></script>
+    <script src="plugins/datatables/buttons.html5.min.js"></script>
+    <!-- excel, pdf -->
+    <script src="plugins/datatables/buttons.print.js"></script>
+    <script src="plugins/datatables/jszip.min.js"></script>
+    <script src="plugins/datatables/pdfmake.min.js"></script>
+    <script src="plugins/datatables/vfs_fonts.js"></script>
+
+    <!---- CERRAR SESION JS --->
+    <script src="js/HomeMaster.js"></script>
+    <asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

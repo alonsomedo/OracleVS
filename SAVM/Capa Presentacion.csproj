@@ -1,0 +1,303 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC936D3F-73E4-4E4E-B399-2ACBFDC9103A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAVM</RootNamespace>
+    <AssemblyName>SAVM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConsultarIncidente.aspx" />
+    <Content Include="ConsultarOrdenCompra.aspx" />
+    <Content Include="css\AdminLTE.css" />
+    <Content Include="css\estilo.css" />
+    <Content Include="css\skins\_all-skins.css" />
+    <Content Include="css\skins\_all-skins.min.css" />
+    <Content Include="GenerarOrdenCompra.aspx" />
+    <Content Include="GenerarVenta.aspx" />
+    <Content Include="img\imgManual.png" />
+    <Content Include="img\m.jpg" />
+    <Content Include="img\m.png" />
+    <Content Include="img\medico.png" />
+    <Content Include="img\mundo.jpg" />
+    <Content Include="img\mundo2.jpg" />
+    <Content Include="img\mundo3.jpg" />
+    <Content Include="img\mundo4.jpg" />
+    <Content Include="img\mundofarma.jpg" />
+    <Content Include="img\yachi.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="js\ConsultarIncidente.js" />
+    <Content Include="js\ConsultarOrdenCompra.js" />
+    <Content Include="js\GenerarOrdenCompra.js" />
+    <Content Include="js\GenerarVenta.js" />
+    <Content Include="js\HomeMaster.js" />
+    <Content Include="js\Medicamentos.js" />
+    <Content Include="plugins\moment.min.js" />
+    <Content Include="js\Proveedores.js" />
+    <Content Include="js\RegistrarFactura.js" />
+    <Content Include="js\RegistrarIncidente.js" />
+    <Content Include="js\ReporteMedicamentosStock.js" />
+    <Content Include="js\ReporteMedicamentosVencimiento.js" />
+    <Content Include="plugins\datatables\buttons.flash.min.js" />
+    <Content Include="plugins\datatables\buttons.html5.min.js" />
+    <Content Include="plugins\datatables\buttons.print.js" />
+    <Content Include="plugins\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="plugins\datatables\dataTables.buttons.js" />
+    <Content Include="plugins\datatables\dataTables.buttons.min.js" />
+    <Content Include="plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="plugins\datatables\jszip.min.js" />
+    <Content Include="plugins\datatables\pdfmake.min.js" />
+    <Content Include="plugins\datatables\vfs_fonts.js" />
+    <Content Include="plugins\jquery.toast.min.css" />
+    <Content Include="plugins\jquery.toast.min.js" />
+    <Content Include="plugins\printThis.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Medicamentos.aspx" />
+    <Content Include="plugins\AdminLTE\app.js" />
+    <Content Include="plugins\AdminLTE\app.min.js" />
+    <Content Include="plugins\AdminLTE\demo.js" />
+    <Content Include="plugins\AdminLTE\pages\dashboard.js" />
+    <Content Include="plugins\AdminLTE\pages\dashboard2.js" />
+    <Content Include="plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="plugins\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Home.Master" />
+    <Content Include="manual\Copia de CV.MedinaDonayre.pdf" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\savm - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="plugins\bootstrap\js\npm.js" />
+    <Content Include="plugins\jquery\jquery-3.2.1.js" />
+    <Content Include="plugins\jquery\jquery-3.2.1.min.js" />
+    <Content Include="plugins\sweet-alert.css" />
+    <Content Include="plugins\sweet-alert.min.js" />
+    <Content Include="Proveedores.aspx" />
+    <Content Include="RegistrarFactura.aspx" />
+    <Content Include="RegistrarIncidente.aspx" />
+    <Content Include="ReporteMedicamentoStock.aspx" />
+    <Content Include="ReporteMedicamentoVencimiento.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsultarIncidente.aspx.cs">
+      <DependentUpon>ConsultarIncidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarIncidente.aspx.designer.cs">
+      <DependentUpon>ConsultarIncidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarOrdenCompra.aspx.cs">
+      <DependentUpon>ConsultarOrdenCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarOrdenCompra.aspx.designer.cs">
+      <DependentUpon>ConsultarOrdenCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarOrdenCompra.aspx.cs">
+      <DependentUpon>GenerarOrdenCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerarOrdenCompra.aspx.designer.cs">
+      <DependentUpon>GenerarOrdenCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarVenta.aspx.cs">
+      <DependentUpon>GenerarVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerarVenta.aspx.designer.cs">
+      <DependentUpon>GenerarVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Medicamentos.aspx.cs">
+      <DependentUpon>Medicamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medicamentos.aspx.designer.cs">
+      <DependentUpon>Medicamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedores.aspx.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proveedores.aspx.designer.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarFactura.aspx.cs">
+      <DependentUpon>RegistrarFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarFactura.aspx.designer.cs">
+      <DependentUpon>RegistrarFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarIncidente.aspx.cs">
+      <DependentUpon>RegistrarIncidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarIncidente.aspx.designer.cs">
+      <DependentUpon>RegistrarIncidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMedicamentoStock.aspx.cs">
+      <DependentUpon>ReporteMedicamentoStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteMedicamentoStock.aspx.designer.cs">
+      <DependentUpon>ReporteMedicamentoStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMedicamentoVencimiento.aspx.cs">
+      <DependentUpon>ReporteMedicamentoVencimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteMedicamentoVencimiento.aspx.designer.cs">
+      <DependentUpon>ReporteMedicamentoVencimiento.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Capa Entidades\Capa Entidades.csproj">
+      <Project>{5b5f2ae7-2e5e-4f3e-8131-42b7d24a34f9}</Project>
+      <Name>Capa Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa Negocio\Capa Negocio.csproj">
+      <Project>{1a3a1441-0ef4-4cc7-932f-17ca21be74c5}</Project>
+      <Name>Capa Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63077</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63077/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
