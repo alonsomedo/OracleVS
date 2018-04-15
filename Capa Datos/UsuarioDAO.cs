@@ -38,8 +38,9 @@ namespace Capa_Datos
 
                 cmd = new OracleCommand("SP_ACCESOSISTEMA", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@username", usuario);
-                cmd.Parameters.Add("@password", clave);
+                cmd.Parameters.Add("p_USERNAME", usuario);
+                cmd.Parameters.Add("p_PASSWORD", clave);
+                cmd.Parameters.Add("cur", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
                 cn.Open();
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
